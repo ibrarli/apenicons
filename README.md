@@ -29,6 +29,3 @@ npm run dev
 # Build everything
 npm run build
 
-# Or build specifically
-npm run build:lib      # Compiles icons to ./dist
-npm run build:website  # Compiles gallery to ./website/dist
