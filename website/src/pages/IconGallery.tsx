@@ -16,19 +16,16 @@ const IconGallery = () => {
     <div className="p-8 max-w-7xl mx-auto min-h-screen bg-slate-50/50">
       <div className="mb-12 text-center sm:text-left">
         <h2 className="text-4xl font-extrabold mb-3 text-slate-900 tracking-tight">Icon Library</h2>
-        <p className="text-slate-500 mb-8 text-lg">Modern, rounded icons for your next project.</p>
+        <p className="text-slate-500 mb-8 text-lg">Click an icon to copy its component name.</p>
         
         <div className="relative max-w-md group">
           <input
             type="text"
-            placeholder="Search icons (e.g., 'menu', 'user')..."
-            className="w-full px-5 py-4 rounded-2xl border border-slate-200 bg-white shadow-sm group-hover:shadow-md focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all text-slate-700"
+            placeholder="Search icons..."
+            className="w-full px-5 py-4 rounded-2xl border border-slate-200 bg-white shadow-sm focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all text-slate-700"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-          <div className="absolute right-4 top-4 text-slate-300 font-mono text-sm hidden sm:block">
-             {filteredIcons.length} icons
-          </div>
         </div>
       </div>
 
@@ -39,23 +36,28 @@ const IconGallery = () => {
             className="group relative flex flex-col items-center justify-center aspect-square p-4 bg-white border border-slate-200 rounded-3xl hover:shadow-xl hover:shadow-blue-500/5 hover:-translate-y-1 hover:border-blue-500 transition-all duration-300 cursor-pointer"
             onClick={() => {
                navigator.clipboard.writeText(`<${icon.name} />`);
-               alert(`Copied <${icon.name} /> to clipboard!`);
+               // You could replace this alert with a toast notification later
+               alert(`Copied <${icon.name} />`);
             }}
           >
+            {/* The Icon */}
             <div className="text-slate-700 group-hover:text-blue-600 transition-colors transform group-hover:scale-110 duration-300">
-              <icon.component size={40} />
+              <icon.component size={44} />
             </div>
             
-            <span className="absolute bottom-4 px-2 text-center text-[10px] uppercase tracking-widest font-black text-slate-400 group-hover:text-blue-500 transition-colors">
+            {/* The Tooltip - Hidden by default, appears on hover */}
+            <div className="absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-slate-900 text-white text-[11px] font-bold rounded-lg opacity-0 group-hover:opacity-100 group-hover:-top-12 transition-all duration-300 pointer-events-none whitespace-nowrap shadow-xl">
               {formatName(icon.name)}
-            </span>
+              {/* Tooltip Arrow */}
+              <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-slate-900 rotate-45"></div>
+            </div>
           </div>
         ))}
       </div>
 
       {filteredIcons.length === 0 && (
-        <div className="py-20 text-center">
-          <p className="text-slate-400 text-xl font-medium">No icons found matching "{search}"</p>
+        <div className="py-20 text-center text-slate-400 text-xl font-medium">
+          No icons found matching "{search}"
         </div>
       )}
     </div>
