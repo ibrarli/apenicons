@@ -1,31 +1,57 @@
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import IconGallery from "../components/IconGallery";
 
 const Home = () => {
+  const [copied, setCopied] = useState(false);
+  const installCommand = "npm install apen-icons";
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(installCommand);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
-    <div className="flex flex-col items-center justify-center py-24 px-8 text-center">
-      <div className="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-xs font-bold mb-6">
-        VERSION 1.0.6 IS LIVE
+    <>
+      <div className="flex flex-col items-center justify-center pt-20 pb-16 px-8 text-center">
+        <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 tracking-tight">
+          Beautiful icons for your 
+          <span className="text-[#E7B339]"> next big project.</span>
+        </h1>
+
+        <p className="text-md text-slate-500 max-w-full mb-10">
+          ApenIcons is a collection of pixel-perfect, manually crafted React
+          components. Fully customizable, accessible, and lightweight.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 items-center">
+          <div className="group relative">
+            <code 
+              onClick={handleCopy}
+              className="bg-white border-2 border-slate-200 px-6 py-3 rounded-xl font-mono text-slate-600 block cursor-pointer hover:border-[#E7B339] transition-all active:scale-95 shadow-sm"
+            >
+              {installCommand}
+            </code>
+            
+            {/* Enhanced Tooltip */}
+            <div className={`absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1.5 rounded-lg text-[11px] font-bold whitespace-nowrap transition-all duration-200 pointer-events-none shadow-xl ring-1 ring-white/10 z-50 ${
+              copied 
+                ? "bg-green-600 text-white opacity-100 -top-11" 
+                : "bg-slate-900 text-white opacity-0 group-hover:opacity-100 group-hover:-top-11"
+            }`}>
+              {copied ? "Copied!" : "Click to copy"}
+              
+              {/* Tooltip Arrow */}
+              <div className={`absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 rotate-45 rounded-sm transition-colors duration-200 ${
+                copied ? "bg-green-600" : "bg-slate-900"
+              }`}></div>
+            </div>
+          </div>
+        </div>
       </div>
-      <h1 className="text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">
-        Icons for your <br />
-        <span className="text-blue-600">next big project.</span>
-      </h1>
-      <p className="text-lg text-slate-500 max-w-2xl mb-10 leading-relaxed">
-        ApenIcons is a collection of pixel-perfect, manual-crafted React components. 
-        Fully customizable, accessible, and lightweight.
-      </p>
-      <div className="flex gap-4">
-        <Link 
-          to="/icons" 
-          className="bg-slate-900 text-white px-8 py-3 rounded-xl font-semibold hover:bg-slate-800 transition-all"
-        >
-          Browse Icons
-        </Link>
-        <code className="bg-white border px-6 py-3 rounded-xl font-mono text-slate-600">
-          npm install apenicons
-        </code>
-      </div>
-    </div>
+
+      <IconGallery />
+    </>
   );
 };
 
