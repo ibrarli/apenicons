@@ -8,7 +8,12 @@ import {
   ArrowLeft, CircleCross, CircleMinus, CirclePlus, CircleStar,
   Cross, EmojiHappy, Eye, EyeScan, Italic,
   Joystick, Joystick2, Lock, Mails, MapPin,
-  Moon, Scan, ScanSearch, Search, Sun
+  Moon, Scan, ScanSearch, Search, Sun,
+  Hd, Mic, Monitor, Pause, Play, Video, Wifi,        // Media & Hardware
+  PieChart, Refresh, Settings,                      // Data & System
+  Folder, Bookmark, Clipboard,                      // Files & Productivity
+  Brush, PaintRoller, Crop, Bold,                   // Design & Text
+  Bug, Bolt, Ring                                   // Development & Objects
 } from '../../src'; 
 
 export const ALL_ICONS = [
@@ -63,4 +68,33 @@ export const ALL_ICONS = [
   { name: 'ScanSearch', component: ScanSearch, tags: ['visual-search', 'ai', 'camera'], version: "v1.0.2" },
   { name: 'Search', component: Search, tags: ['find', 'lookup', 'magnifier'], version: "v1.0.2" },
   { name: 'Sun', component: Sun, tags: ['light-mode', 'day', 'weather'], version: "v1.0.2" },
+// Media & Hardware (v1.0.3)
+  { name: 'Hd', component: Hd, tags: ['video', 'quality', 'high-definition'], version: "v1.0.3" },
+  { name: 'Mic', component: Mic, tags: ['audio', 'record', 'voice', 'microphone'], version: "v1.0.3" },
+  { name: 'Monitor', component: Monitor, tags: ['screen', 'display', 'computer', 'desktop'], version: "v1.0.3" },
+  { name: 'Pause', component: Pause, tags: ['media', 'stop', 'control', 'wait'], version: "v1.0.3" },
+  { name: 'Play', component: Play, tags: ['media', 'start', 'control', 'action'], version: "v1.0.3" },
+  { name: 'Video', component: Video, tags: ['camera', 'movie', 'record', 'media'], version: "v1.0.3" },
+  { name: 'Wifi', component: Wifi, tags: ['network', 'internet', 'connection', 'signal'], version: "v1.0.3" },
+
+  // Data & System (v1.0.3)
+  { name: 'PieChart', component: PieChart, tags: ['data', 'analytics', 'stats', 'graph'], version: "v1.0.3" },
+  { name: 'Refresh', component: Refresh, tags: ['reload', 'update', 'sync', 'rotate'], version: "v1.0.3" },
+  { name: 'Settings', component: Settings, tags: ['config', 'options', 'gear', 'preferences'], version: "v1.0.3" },
+
+  // Files & Productivity (v1.0.3)
+  { name: 'Folder', component: Folder, tags: ['directory', 'files', 'storage', 'save'], version: "v1.0.3" },
+  { name: 'Bookmark', component: Bookmark, tags: ['save', 'favorite', 'ribbon', 'read-later'], version: "v1.0.3" },
+  { name: 'Clipboard', component: Clipboard, tags: ['copy', 'paste', 'tasks', 'notes'], version: "v1.0.3" },
+
+  // Design & Editing (v1.0.3)
+  { name: 'Brush', component: Brush, tags: ['paint', 'draw', 'art', 'style'], version: "v1.0.3" },
+  { name: 'PaintRoller', component: PaintRoller, tags: ['fill', 'theme', 'appearance', 'color'], version: "v1.0.3" },
+  { name: 'Crop', component: Crop, tags: ['edit', 'image', 'resize', 'frame'], version: "v1.0.3" },
+  { name: 'Bold', component: Bold, tags: ['text', 'style', 'editor', 'weight'], version: "v1.0.3" },
+
+  // Development & Objects (v1.0.3)
+  { name: 'Bug', component: Bug, tags: ['debug', 'error', 'code', 'issue'], version: "v1.0.3" },
+  { name: 'Bolt', component: Bolt, tags: ['flash', 'energy', 'power', 'fast'], version: "v1.0.3" },
+  { name: 'Ring', component: Ring, tags: ['premium', 'jewelry', 'marriage', 'engagement'], version: "v1.0.3" },
 ];
