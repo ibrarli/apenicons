@@ -2,7 +2,7 @@ import { useState, useMemo } from "react";
 import { ALL_ICONS } from "../icon-registry";
 import IconDrawer from "./IconDrawer";
 import IconItem from "./IconItem";
-import FilterDropdown from "./FilterDropDown";
+import FilterDropdown from "./FilterDropdown";
 
 const IconGallery = () => {
   const [search, setSearch] = useState("");
