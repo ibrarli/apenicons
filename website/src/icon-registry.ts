@@ -13,7 +13,14 @@ import {
   PieChart, Refresh, Settings,                      // Data & System
   Folder, Bookmark, Clipboard,                      // Files & Productivity
   Brush, PaintRoller, Crop, Bold,                   // Design & Text
-  Bug, Bolt, Ring                                   // Development & Objects
+  Bug, Bolt, Ring, LockKeyhole, LockKeyholeOpen, LockOpen,                                   // Development & Objects
+  ChevronUp,
+  ChevronRight,
+  ChevronLeft,
+  ChevronDown,
+  TriangleAlert,
+  AtSign,X,
+  EyeClosed
 } from '../../src'; 
 
 export const ALL_ICONS = [
@@ -55,7 +62,7 @@ export const ALL_ICONS = [
   { name: 'CircleStar', component: CircleStar, tags: ['favorite', 'rating', 'circle'], version: "v1.0.2", category: "Actions" },
   { name: 'Cross', component: Cross, tags: ['close', 'delete', 'remove'], version: "v1.0.2", category: "Actions" },
   { name: 'EmojiHappy', component: EmojiHappy, tags: ['smile', 'face', 'success'], version: "v1.0.2", category: "Actions" },
-  { name: 'Eye', component: Eye, tags: ['view', 'show', 'visibility'], version: "v1.0.2", category: "Actions" },
+  { name: 'Eye', component: Eye, tags: ['view', 'show', 'visibility'], version: "v1.1.0", category: "Actions" },
   { name: 'EyeScan', component: EyeScan, tags: ['security', 'biometric', 'scan'], version: "v1.0.2", category: "Security" },
   { name: 'Italic', component: Italic, tags: ['text', 'style', 'editor'], version: "v1.0.2", category: "Design" },
   { name: 'Joystick', component: Joystick, tags: ['game', 'directional', 'input'], version: "v1.0.2", category: "Hardware" },
@@ -98,4 +105,21 @@ export const ALL_ICONS = [
   { name: 'Bug', component: Bug, tags: ['debug', 'error', 'code', 'issue'], version: "v1.0.3", category: "Development" },
   { name: 'Bolt', component: Bolt, tags: ['flash', 'energy', 'power', 'fast'], version: "v1.0.3", category: "Development" },
   { name: 'Ring', component: Ring, tags: ['premium', 'jewelry', 'marriage', 'engagement'], version: "v1.0.3", category: "Objects" },
+
+
+  { name: 'LockKeyhole', component: LockKeyhole, tags: ['security', 'private', 'keyhole'], version: "v1.0.5", category: "Security" },
+  { name: 'LockOpen', component: LockOpen, tags: ['security', 'public', 'open'], version: "v1.0.5", category: "Security" },
+  { name: 'LockKeyholeOpen', component: LockKeyholeOpen, tags: ['security', 'public', 'keyhole-open'], version: "v1.0.5", category: "Security" },
+
+  { name: 'ChevronDown', component: ChevronDown, tags: ['arrow', 'direction', 'down'], version: "v1.0.5", category: "Navigation" },
+  { name: 'ChevronLeft', component: ChevronLeft, tags: ['arrow', 'direction', 'left'], version: "v1.0.5", category: "Navigation" },
+  { name: 'ChevronRight', component: ChevronRight, tags: ['arrow', 'direction', 'right'], version: "v1.0.5", category: "Navigation" },
+  { name: 'ChevronUp', component: ChevronUp, tags: ['arrow', 'direction', 'up'], version: "v1.0.5", category: "Navigation" },
+
+  { name: 'TriangleAlert', component: TriangleAlert, tags: ['warning', 'caution', 'alert'], version: "v1.0.7", category: "Actions" },
+  { name: 'AtSign', component: AtSign, tags: ['email', 'contact', 'social'], version: "v1.0.7", category: "Communication" },
+
+  { name: 'X', component: X, tags: ['close', 'cancel', 'remove'], version: "v1.0.9", category: "Actions" },
+
+  { name: 'EyeClosed', component: EyeClosed, tags: ['hide', 'conceal', 'invisible'], version: "v1.1.0", category: "Actions" },
 ];
