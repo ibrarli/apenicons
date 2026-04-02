@@ -37,7 +37,7 @@ export * from './icons/v1.0.2/CirclePlus';
 export * from './icons/v1.0.2/CircleStar';
 export * from './icons/v1.0.2/Cross';
 export * from './icons/v1.0.2/EmojiHappy';
-export * from './icons/v1.1.0/Eye';
+export * from './icons/v1.1.1/Eye';
 export * from './icons/v1.0.2/EyeScan';
 export * from './icons/v1.0.2/Italic';
 export * from './icons/v1.0.2/Joystick';
@@ -98,5 +98,5 @@ export * from './icons/v1.0.7/AtSign';
 
 export * from './icons/v1.0.9/X';
 
-export * from './icons/v1.1.0/Eye';
-export * from './icons/v1.1.0/EyeClosed';
+export * from './icons/v1.1.1/Eye';
+export * from './icons/v1.1.1/EyeClosed';
